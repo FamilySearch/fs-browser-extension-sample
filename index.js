@@ -5,6 +5,11 @@ var fs = new FamilySearch({
   // You'll need to change this to your own app key.
   appKey: 'a02j000000MZshWAAT',
 
+  // The SDK defaults to integration to technically this line is superfluous. We
+  // have it here anyways to show where you would configure the SDK to work with
+  // other FamilySearch environments.
+  environment: 'integration',
+
   // Chrome generates a unique extension ID which is included in the URL so
   // we ask chrome what the proper URL for this page.
   redirectUri: chrome.extension.getURL('index.html'),
