@@ -27,7 +27,7 @@ right of the URL bar. When that icon is clicked, `background.js` is loaded and
 run. That script says that the `index.html` page should be opened in a new tab
 when the icons clicked, and thus the page is opened.
 
-When `index.html` load the first time the user isn't authenticated so we ask
+When `index.html` loads the first time the user isn't authenticated so we ask
 them to sign in. Clicking the "Sign In" button initiates the OAuth process by
 sending the user to the FamilySearch.org sign in screen.
 
@@ -61,6 +61,8 @@ The user is now authenticated so we fetch and display their profile.
   // browser_action block is required for us to set it's click behavior in
   // background.js. Without it we would get an undefined error when trying to
   // access chrome.browserAction. Alternatively you could specify default_icon.
+  // It was easier for us to specify a default_title than it was to generate an
+  // icon for a sample app.
   "browser_action": {
     "default_title": "FamilySearch"
   },
